@@ -40,4 +40,5 @@ app.delete("/musica/:id", (req,res)=>{
 app.post("/musica", (req, res) => {
     console.log(req.body)
     db.run(`INSERT INTO Musicas (titulo,imagem,audio) VALUES(?,?,?)`, [req.body.titulo,"2871307.png","16-bits-musica-294099.mp3"])
+    res.send("Musica Salva!")
 })
