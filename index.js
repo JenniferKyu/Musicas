@@ -23,6 +23,10 @@ db.serialize(() => {
         )`)
 })
 
+app.get("/", (req, res) => {
+    res.sendFile('index.html',{root:__dirname})
+})
+
 app.get("/musica", (req, res) => {
     db.all(`SELECT * FROM Musicas`, [], (err, rows) => {
         res.json(rows)
