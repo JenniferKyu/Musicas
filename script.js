@@ -41,7 +41,7 @@ var listaDeMusica =
 
 async function montarLista(lista) {
 
-    var musicas = await fetch("http://localhost:1234/musica")
+    var musicas = await fetch("https://musicas-bbhn.onrender.com/musica")
     var listaDeMusica = await musicas.json()
 
     var listaPronta = lista || listaDeMusica
