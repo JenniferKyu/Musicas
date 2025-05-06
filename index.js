@@ -35,10 +35,11 @@ app.get("/musica", (req, res) => {
 
 app.delete("/musica/:id", (req,res)=>{
     db.run(`DELETE FROM Musicas WHERE  id ==(?)`, [req.params.id])
+    res.redirect(req.get('referer'))
 })
 
 app.post("/musica", (req, res) => {
     console.log(req.body)
     db.run(`INSERT INTO Musicas (titulo,imagem,audio) VALUES(?,?,?)`, [req.body.titulo,"2871307.png","16-bits-musica-294099.mp3"])
-    res.send("Musica Salva!")
+     res.redirect(req.get('referer'))
 })
