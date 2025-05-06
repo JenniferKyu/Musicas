@@ -135,7 +135,8 @@ h2,div {
     justify-content: center;
   }
     .excluir{
-        max-widith: 14px 14px;
+        width: 100%;
+        max-width: 50px;
     }
 }
 
@@ -419,11 +420,11 @@ async function montarLista(lista) {
                 <img src="${musica.imagem}" alt="">
                 <h2>${musica.titulo}</h2>
             </div>
-            <a href="">
+            
                 <audio id="meuAudio" controls>
                     <source src="${musica.audio}" type="audio/mpeg">
                 </audio>
-            </a>
+            
             <button class="excluir"><img src="excluir.png" alt="" onclick="excluirMusica(${musica.id})"></button>
                 `
 
