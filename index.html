@@ -463,6 +463,7 @@ async function excluirMusica(index){
 
     let req=await fetch("https://musicas-bbhn.onrender.com/musica/"+index,
         {method:"DELETE"})
+    window.location.reload()
     montarLista()
 }
     </script>
