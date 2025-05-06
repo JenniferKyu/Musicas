@@ -461,7 +461,7 @@ function adicionarMusica() {
 
 async function excluirMusica(index){
 
-    let req=await fetch("https://musicas-bbhn.onrender.com/musica"+index,
+    let req=await fetch("https://musicas-bbhn.onrender.com/musica/"+index,
         {method:"DELETE"})
     montarLista()
 }
